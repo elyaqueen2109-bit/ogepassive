@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passive Voice - Тренажер для ОГЭ</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        h1 {
+            text-align: center;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .rule-box {
+            background-color: #e8f4f8;
+            border-left: 5px solid #3498db;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .rule-box table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        .rule-box th, .rule-box td {
+            border: 1px solid #bdc3c7;
+            padding: 8px;
+            text-align: left;
+        }
+        .rule-box th {
+            background-color: #d1e7f0;
+        }
+        .exercise {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        .exercise h3 {
+            margin-top: 0;
+            color: #2980b9;
+        }
+        .sentence {
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        input[type="text"] {
+            padding: 8px;
+            border: 2px solid #bdc3c7;
+            border-radius: 4px;
+            font-size: 16px;
+            width: 200px;
+            transition: border-color 0.3s;
+        }
+        input[type="text"]:focus {
+            border-color: #3498db;
+            outline: none;
+        }
+        .btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+            transition: background-color 0.3s;
+        }
+        .btn-check {
+            background-color: #27ae60;
+            color: white;
+        }
+        .btn-check:hover {
+            background-color: #219150;
+        }
+        .btn-reset {
+            background-color: #e74c3c;
+            color: white;
+        }
+        .btn-reset:hover {
+            background-color: #c0392b;
+        }
+        .correct {
+            border-color: #27ae60 !important;
+            background-color: #d5f5e3;
+        }
+        .incorrect {
+            border-color: #e74c3c !important;
+            background-color: #fadbd8;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Passive Voice: Тренажер для ОГЭ</h1>
+
+    <!-- ТЕОРЕТИЧЕСКИЙ БЛОК -->
+    <div class="rule-box">
+        <h2>📖 Правило: Времена Passive Voice</h2>
+        <p>Формула пассивного залога: <strong>be + V3 (Past Participle)</strong></p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Время</th>
+                    <th>Формула</th>
+                    <th>Пример (Active → Passive)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Present Simple</td>
+                    <td>am / is / are + V3</td>
+                    <td>They <em>clean</em> the room. → The room <strong>is cleaned</strong>.</td>
+                </tr>
+                <tr>
+                    <td>Past Simple</td>
+                    <td>was / were + V3</td>
+                    <td>She <em>broke</em> the window. → The window <strong>was broken</strong>.</td>
+                </tr>
+                <tr>
+                    <td>Future Simple</td>
+                    <td>will be + V3</td>
+                    <td>They <em>will send</em> the letter. → The letter <strong>will be sent</strong>.</td>
+                </tr>
+                <tr>
+                    <td>Present Perfect</td>
+                    <td>have / has been + V3</td>
+                    <td>He <em>has done</em> the task. → The task <strong>has been done</strong>.</td>
+                </tr>
+                <tr>
+                    <td>Past Perfect</td>
+                    <td>had been + V3</td>
+                    <td>She <em>had finished</em> the work. → The work <strong>had been finished</strong>.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- УПРАЖНЕНИЕ 1 -->
+    <div class="exercise" id="ex1">
+        <h3>Упражнение 1. Раскройте скобки, употребляя глаголы в Passive Voice. Определите время по контексту.</h3>
+        
+        <div class="sentence">1. This bridge <input type="text" data-answer="was built"> (build) in 1995.</div>
+        <div class="sentence">2. The room <input type="text" data-answer="is cleaned"> (clean) every day.</div>
+        <div class="sentence">3. The letters <input type="text" data-answer="will be sent"> (send) tomorrow.</div>
+        <div class="sentence">4. English <input type="text" data-answer="is spoken"> (speak) all over the world.</div>
+        <div class="sentence">5. The dinner <input type="text" data-answer="has already been cooked"> (already / cook).</div>
+        <div class="sentence">6. The homework <input type="text" data-answer="is done"> (do) every day.</div>
+        <div class="sentence">7. These houses <input type="text" data-answer="have not been sold"> (not / sell) yet.</div>
+        <div class="sentence">8. The window <input type="text" data-answer="was broken"> (break) by the boys yesterday.</div>
+
+        <button class="btn btn-check" onclick="checkExercise('ex1')">Проверить</button>
+        <button class="btn btn-reset" onclick="resetExercise('ex1')">Сбросить</button>
+    </div>
+
+    <!-- УПРАЖНЕНИЕ 2 -->
+    <div class="exercise" id="ex2">
+        <h3>Упражнение 2. Преобразуйте предложения из Active в Passive.</h3>
+        
+        <div class="sentence">1. They make cars in Japan. → Cars <input type="text" data-answer="are made"> in Japan.</div>
+        <div class="sentence">2. Someone stole my bike last week. → My bike <input type="text" data-answer="was stolen"> last week.</div>
+        <div class="sentence">3. They will publish the book next month. → The book <input type="text" data-answer="will be published"> next month.</div>
+        <div class="sentence">4. People have used this computer for many years. → This computer <input type="text" data-answer="has been used"> for many years.</div>
+        <div class="sentence">5. They have already finished the task. → The task <input type="text" data-answer="has already been finished"> already.</div>
+
+        <button class="btn btn-check" onclick="checkExercise('ex2')">Проверить</button>
+        <button class="btn btn-reset" onclick="resetExercise('ex2')">Сбросить</button>
+    </div>
+
+    <!-- УПРАЖНЕНИЕ 3 (ОГЭ) -->
+    <div class="exercise" id="ex3">
+        <h3>Упражнение 3. Комплексный формат ОГЭ (Task 3). Прочитайте текст. Преобразуйте слова, напечатанные заглавными буквами, чтобы они грамматически соответствовали содержанию текста.</h3>
+        
+        <p><strong>A Day at the Museum</strong></p>
+        <p>Yesterday my class <input type="text" data-answer="went"> (GO) to the local history museum. It was a very interesting trip.</p>
+        <p>The museum <input type="text" data-answer="was opened"> (OPEN) many years ago, but it still looks great.</p>
+        <p>A new exhibition <input type="text" data-answer="has been shown"> (SHOW) to the public recently.</p>
+        <p>Our guide told us that a famous artist <input type="text" data-answer="had been invited"> (INVITE) to the opening ceremony before the exhibition started.</p>
+        <p>I was surprised to learn that the exhibition <input type="text" data-answer="had been organized"> (ORGANIZE) by our history teacher and some volunteers.</p>
+        <p>Some of the exhibits <input type="text" data-answer="were"> (BE) very old and fragile, so we couldn't touch them.</p>
+        <p>There was a big model of a pharaoh's tomb. It <input type="text" data-answer="looked"> (LOOK) so realistic!</p>
+        <p>My friend Jake said, "If I <input type="text" data-answer="were"> (BE) an archaeologist, I would travel to Egypt."</p>
+        <p>I really enjoyed the excursion. I think museums are much <input type="text" data-answer="more interesting"> (INTERESTING) than theme parks.</p>
+
+        <button class="btn btn-check" onclick="checkExercise('ex3')">Проверить</button>
+        <button class="btn btn-reset" onclick="resetExercise('ex3')">Сбросить</button>
+    </div>
+
+    <!-- УПРАЖНЕНИЕ 4 (ОГЭ) -->
+    <div class="exercise" id="ex4">
+        <h3>Упражнение 4. Комплексный формат ОГЭ (Task 3). Смешанные времена и залоги.</h3>
+        
+        <p><strong>A New Smartphone</strong></p>
+        <p>My parents gave me a new smartphone for my birthday last week.</p>
+        <p>I <input type="text" data-answer="could not"> (NOT / CAN) believe my eyes when I opened the box! It was exactly the model I wanted.</p>
+        <p>Now I <input type="text" data-answer="use"> (USE) it to do my homework and chat with friends every day.</p>
+        <p>My little sister is jealous. She says, "If I <input type="text" data-answer="had"> (HAVE) such a phone, I would take millions of photos."</p>
+        <p>But I told her she was too young. She <input type="text" data-answer="is not allowed"> (NOT / ALLOW) to use gadgets for a long time.</p>
+        <p>Yesterday, while I <input type="text" data-answer="was watching"> (WATCH) a video, the phone suddenly turned off.</p>
+        <p>I was worried because it <input type="text" data-answer="had been bought"> (BUY) only a week ago.</p>
+        <p>Fortunately, my dad fixed it. It turned out that the battery <input type="text" data-answer="had not been charged"> (NOT / CHARGE) properly.</p>
+        <p>Now it works fine. It is the <input type="text" data-answer="best"> (GOOD) phone I have ever had.</p>
+        <p>I promise I <input type="text" data-answer="will take"> (TAKE) good care of it.</p>
+
+        <button class="btn btn-check" onclick="checkExercise('ex4')">Проверить</button>
+        <button class="btn btn-reset" onclick="resetExercise('ex4')">Сбросить</button>
+    </div>
+
+    <script>
+        // Функция нормализации: приводит ответ к единому виду
+        function normalize(str) {
+            return str
+                .toLowerCase()
+                .replace(/[\u00A0\u202F\u2007]/g, ' ') // заменяем неразрывные пробелы
+                .replace(/[’‘`]/g, "'")                 // заменяем все виды апострофов на прямой
+                .replace(/\s+/g, ' ')                   // убираем двойные пробелы
+                .trim();                                 // убираем пробелы по краям
+        }
+
+        function checkExercise(exerciseId) {
+            const container = document.getElementById(exerciseId);
+            const inputs = container.querySelectorAll('input[type="text"]');
+            
+            inputs.forEach(input => {
+                const userAnswer = normalize(input.value);
+                const correctAnswer = normalize(input.getAttribute('data-answer'));
+
+                if (userAnswer === correctAnswer) {
+                    input.classList.remove('incorrect');
+                    input.classList.add('correct');
+                } else {
+                    input.classList.remove('correct');
+                    input.classList.add('incorrect');
+                }
+            });
+        }
+
+        function resetExercise(exerciseId) {
+            const container = document.getElementById(exerciseId);
+            const inputs = container.querySelectorAll('input[type="text"]');
+            
+            inputs.forEach(input => {
+                input.value = '';
+                input.classList.remove('correct', 'incorrect');
+            });
+        }
+    </script>
+
+</body>
+</html>
